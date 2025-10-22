@@ -8,23 +8,29 @@
     padding: .5rem 1rem;
     background-color: $color-buttons;
     position: relative;
+    border-top: 10px solid $border-color;
+    border-bottom: 10px solid $border-color;
 
     &::before,
     &::after {
       content: '';
-      clip-path: polygon(100% 100%, 100% 0%, 18.81% 0%, 18.81% 8.8325%, 9.1125% 8.8325%, 9.1125% 16.575%, 0% 16.575%, 0% 83.2075%, 9.1125% 83.2075%, 9.1125% 91.955%, 18.81% 91.955%, 18.81% 100%);
+      // clip-path: polygon(25% 50%, 50% 50%, 50% 25%, 75% 25%, 75% 75%, 25% 75%);
+      clip-path: polygon(0% 23.25%, 23.5% 23.25%, 23.5% 0%, 100% 0%, 100% 100%, 23.5% 100%, 23.5% 80.81%, 0% 80.81%);
       background-color: $color-buttons;
       position: absolute;
-      top: 0;
-      left: -25%;
-      width: 25%;
+      top: -10px;
+      left: -50%;
+      width: 50%;
       height: 100%;
       transform-origin: center;
+      border-left: 10px solid $border-color;
+      border-top: 10px solid $border-color;
+      border-bottom: 10px solid $border-color;
     }
 
     &::after {
       left: auto;
-      right: -25%;
+      right: -50%;
       // Mirror the shape
       transform: scale(-1, 1);
     }
