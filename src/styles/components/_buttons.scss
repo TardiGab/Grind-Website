@@ -1,0 +1,32 @@
+.hero {
+  &__cta {
+    font-family: $font-pixel;
+    font-size: $p-desktop;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    padding: .5rem 1rem;
+    background-color: $color-buttons;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      clip-path: polygon(100% 100%, 100% 0%, 18.81% 0%, 18.81% 8.8325%, 9.1125% 8.8325%, 9.1125% 16.575%, 0% 16.575%, 0% 83.2075%, 9.1125% 83.2075%, 9.1125% 91.955%, 18.81% 91.955%, 18.81% 100%);
+      background-color: $color-buttons;
+      position: absolute;
+      top: 0;
+      left: -25%;
+      width: 25%;
+      height: 100%;
+      transform-origin: center;
+    }
+
+    &::after {
+      left: auto;
+      right: -25%;
+      // Mirror the shape
+      transform: scale(-1, 1);
+    }
+  }
+}
