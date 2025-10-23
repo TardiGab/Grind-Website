@@ -19,7 +19,7 @@
   <main>
     <section class="hero">
       <div class="hero__container">
-        <img src="./assets/images/GrindLogo.svg" alt="Logo Grind pixellisé" class="hero__logo">
+        <img src="./assets/images/logo.svg" alt="Logo Grind pixellisé" class="hero__logo">
         <img src="./assets/images/background-immeuble.png" alt="Immeubles pixellisés bleu" class="hero__background">
         <img src="./assets/images/batiments.png" alt="batiment en pixel" class="hero__batiments">
         <span class="hero__span">Courez, Suez, Survivez</span>
@@ -40,7 +40,7 @@
         <div class="box1">
             <div class="box1__titre">
                 <h3>Mode de vie</h3>
-                <img src="./assets/images/white_cross.png" alt="crois blanche" class="white cross">
+                <img src="./assets/images/white-cross.svg" alt="crois blanche" class="cross">
                 <p>L'obésité c'est quoi ?</p>
             </div>
             <div class="box1__contenu">
@@ -51,7 +51,7 @@
         <div class="box2">
             <div class="box2__titre">
                 <h3>Risques</h3>
-                <img src="./assets/images/white_cross.png" alt="crois blanche" class="white cross">
+                <img src="./assets/images/white-cross.svg" alt="crois blanche" class="cross">
                 <p>Des conséquences graves ?</p>
             </div>
             <div class="box2__contenu">
@@ -61,7 +61,7 @@
         <div class="box3">
             <div class="box3__titre">
                 <h3>Comprendre</h3>
-                <img src="./assets/images/white_cross.png" alt="crois blanche" class="white cross">
+                <img src="./assets/images/white-cross.svg" alt="crois blanche" class="cross">
                 <p>Quelles sont les clés de l'évolution ?</p>
             </div>
             <div class="box3__contenu">
@@ -70,17 +70,19 @@
         </div>
     </section>
     <section class="image">
-        <div class="image__titre">
-            <span>GRIND</span>
-            <div class="image__titre--croix">X</div>
-            <span>GRIND</span>
-            <div class="image__titre--croix">X</div>
-            <span>GRIND</span>
-            <div class="image__titre--croix">X</div>
-            <span>GRIND</span>
-            <div class="image__titre--croix">X</div>
-            <span>GRIND</span>
-            <div class="image__titre--croix">X</div>
+        <div class="image__ctn">
+            <div class="image__titre">
+                <div class="image__titre--titre"></div>
+                <div class="image__titre--croix"></div>
+                <div class="image__titre--titre"></div>
+                <div class="image__titre--croix"></div>
+                <div class="image__titre--titre"></div>
+                <div class="image__titre--croix"></div>
+                <div class="image__titre--titre"></div>
+                <div class="image__titre--croix"></div>
+                <div class="image__titre--titre"></div>
+                <div class="image__titre--croix"></div>
+            </div>
         </div>
         <div class="image__slider">
             <img class="" src="" alt="">
@@ -90,14 +92,14 @@
             <img class="" src="" alt="">
         </div>
          <div class="image__texte">
-            <ul class="image__texte--gauche">
-                <li>PIXEL ART & 8-BIT </li>
-                <li>GRAPHICS</li>
-            </ul>
-            <ul class="image__texte--droite">
-                <li>INSPIRED BY RETRO</li>
-                <li>GAMES</li>
-            </ul>
+            <div class="image__texte--gauche">
+                <span>PIXEL ART & 8-BIT </span>
+                <span>GRAPHICS</span>
+            </div>
+            <div class="image__texte--droite">
+                <span>INSPIRED BY RETRO</span>
+                <span>GAMES</span>
+            </div>
          </div>
     </section>
     <section class="personnages">
@@ -105,17 +107,19 @@
         <p class="personnages__texte-presentation">Voici comment l'endurance et la progression du personnage définissent votre parcours.</p>
         <div class="personnage1__descriptif">
             <div class="personnages1__contenu">
-                <div class="personnages1__contenu--image"></div>
+                <img class="personnages1__contenu--image" src="./assets/images/perso1.png">
                 <div class="personnages1__contenu--texte">
                     <h3 class="personnages1__contenu--texte-titre">PERSONNAGE NIV.1</h3>
-                    <p class="personnages1__contenu--texte-texte">Le point de départ. Une forte corpulence limite les performances. CHaque effort est un défi initial.</p>
+                    <p class="personnages1__contenu--texte-texte">Le point de départ. Une forte corpulence limite les performances. Chaque effort est un défi initial.</p>
                     <p>Représente la difficulté de débuter un parcours de santé.</p>
                 </div>
             </div>
         </div>
         <div class="personnage2__descriptif">
             <div class="personnages2__contenu">
-                <div class="personnages2__contenu--image"></div>
+                <div class="personnages2__contenu--image">
+                    <img class="personnages1__contenu--image" src="./assets/images/perso2.png">
+                </div>
                 <div class="personnages2__contenu--texte">
                     <h3 class="personnages2__contenu--texte-titre">PERSONNAGE NIV.2</h3>
                     <p class="personnages2__contenu--texte-texte">L'équilibre retrouvé. Une corpulence saine permet une meilleure performance et une progression plus fluide. Atteindre ce stade est une victoire sur l'inertie.</p>
@@ -124,7 +128,9 @@
         </div>
         <div class="personnage3__descriptif">
             <div class="personnages3__contenu">
-                <div class="personnages3__contenu--image"></div>
+                <div class="personnages3__contenu--image">
+                    <img class="personnages1__contenu--image" src="./assets/images/perso3.png">
+                </div>
                 <div class="personnages3__contenu--texte">
                     <h3 class="personnages3__contenu--texte-titre">PERSONNAGE NIV.3</h3>
                     <p class="personnages3__contenu--texte-texte">L'apogée de l'effort. Une condition physique optimale offre agilité et vitesse. Le personnage est prêt à affronter tous les défis avec une énergie débordante.</p>
@@ -133,7 +139,9 @@
         </div>
         <div class="personnage4__descriptif">
             <div class="personnages4__contenu">
-                <div class="personnages4__contenu--image"></div>
+                <div class="personnages4__contenu--image">
+                    <img class="personnages4__contenu--image" src="./assets/images/perso4.png">
+                </div>
                 <div class="personnages4__contenu--texte">
                     <h3 class="personnages4__contenu--texte-titre">PERSONNAGE NIV.4</h3>
                     <p class="personnages4__contenu--texte-texte">Le défis ultime pour les plus courageux. Seuls les légendes peuvent espérer atteindre ce niveau de maîtrise. Le secret reste à découvrir.</p>
