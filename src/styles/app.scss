@@ -171,7 +171,7 @@ h4 {
         gap: 2rem;
         overflow: hidden;
 
-        animation: move 10s linear infinite;
+        animation: move 10s linear infinite alternate;
 
         &--titre {
             background-image: url(../assets/images/GRIND.svg);
@@ -192,6 +192,13 @@ h4 {
 
             animation: rotate 5s linear infinite;
         }
+    }
+
+    &__texte {
+        margin: 0 50px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
     }
 }
 
@@ -250,7 +257,7 @@ h4 {
             height: fit-content;
             gap: 2rem;
 
-            animation: move 10s linear infinite;
+            animation: move 10s linear infinite alternate;
 
             &--titre {
                 background-image: url(../assets/images/GRIND_vide.svg);
@@ -282,6 +289,23 @@ h4 {
     width: 4em;
 }
 
+.image__slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 200%;
+    height: fit-content;
+    gap: 2rem;
+    margin-bottom: 40px;
+    overflow: hidden;
+
+    animation: move2 10s linear infinite alternate;
+
+    img {
+        width: 30rem;
+    }
+}
+
 @keyframes move {
     from {
         transform: translateX(0);
@@ -289,6 +313,16 @@ h4 {
 
     to {
         transform: translateX(-50%);
+    }
+}
+
+@keyframes move2 {
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0);
     }
 }
 
