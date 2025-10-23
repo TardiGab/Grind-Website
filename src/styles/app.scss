@@ -10,6 +10,7 @@ body {
 
 p {
   font-family: $font-clash;
+  font-size: $p-size;
 }
 
 //hero
@@ -55,6 +56,10 @@ p {
     background-size: contain;
     transform: rotate(180deg);
     z-index: -1;
+
+    @media (max-width: 768px) {
+      bottom: -20%;
+    }
   }
 }
 
@@ -70,7 +75,7 @@ p {
   position: relative;
 
   @media (max-width: 768px) {
-    margin: 0 5%;
+    margin: 1rem;
   }
 
   h2 {
@@ -106,12 +111,12 @@ p {
     flex-direction: column;
     align-items: flex-end;
     margin-bottom: 4rem;
-    // margin-right: 20%;
 
     @media (max-width: 768px) {
       align-items: center;
       justify-content: center;
       margin-right: 0;
+      margin-bottom: 2rem;
     }
 
     p {
@@ -130,9 +135,85 @@ p {
   }
 }
 
+.info {
+  background-color: $main-color;
+  padding: 2rem 15%;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+
+  &__title {
+    font-family: $font-clash;
+    font-size: clamp(2rem, 1.5rem + 1.6667vw, 3rem);
+    margin-bottom: 2rem;
+    margin-top: 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+.accordion {
+
+  &__item {
+    width: 40%;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid black;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  &__header {
+    cursor: pointer;
+    padding: .5rem;
+
+    h3 {
+      font-family: $font-pixel;
+      font-size: $h3-size;
+      text-transform: uppercase;
+      margin: 0;
+      color: #000;
+    }
+
+    span {
+      font-family: $font-clash;
+      font-size: $p-size;
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__content {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 .5rem;
+
+    &--active {
+      max-height: 1000px;
+    }
+  }
+}
+
 .cross {
   width: 15px;
   height: 15px;
+  transition: transform 0.3s ease;
+
+  &--active {
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+  }
 }
 
 //personnages
