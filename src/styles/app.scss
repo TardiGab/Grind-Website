@@ -1,5 +1,6 @@
 @import 'utils/variables';
 @import 'components/type';
+@import 'components/buttons';
 
 body {
   margin: 0;
@@ -36,27 +37,9 @@ p{
     text-align: center;
   }
 
-  &__cta {
-    font-family: $font-pixel;
-    font-size: $p-desktop;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: black;
-    padding: .5rem 3rem;
-    background-color: #eb8b47;
-    position: relative;
-
-    &::before {
-      content: '';
-      clip-path: polygon(400px 400px, 400px 0px, 75.24px 0px, 75.24px 35.33px, 36.45px 35.33px, 36.45px 66.3px, 0px 66.3px, 0px 332.83px, 36.45px 332.83px, 36.45px 367.82px, 75.24px 367.82px, 75.24px 400px);
-      background-color: #eb8b47;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 10px;
-      height: 10px;
-      transform-origin: center;
-    }
+  &__background,
+  &__batiments {
+    width: 100vw;
   }
 }
 .hero__background, .hero__batiments{
