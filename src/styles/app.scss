@@ -26,11 +26,11 @@ p {
     background: $color-background;
   }
 
-  &__logo {
-    @media (max-width: 768px) {
-      width: 90%;
+    &__logo {
+        @media (max-width: 768px) {
+            width: 90%;
+        }
     }
-  }
 
   &__span {
     font-family: $font-pixel;
@@ -218,102 +218,267 @@ p {
 
 //personnages
 .personnages {
-  background-color: #2C4C87;
-  padding-bottom: 4rem;
+    background-color: #2C4C87;
+    padding-bottom: 2rem;
 
-  &__titre {
-    font-family: $font-pixel;
-    font-size: 24px;
-  }
+    &__titre {
+        font-family: $font-pixel;
+        font-size: 24px;
+        margin: 0 50px;
+        padding-top: 8px;
+    }
+
+    &__texte {
+        &-presentation {
+            margin: 16px 50px;
+        }
+    }
 }
 
 .personnages1,
 .personnages2,
 .personnages3,
 .personnages4 {
-  &__contenu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 4rem;
+    &__contenu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 4rem;
 
-    &--image {
-      width: 350px;
-      height: auto;
+        &--image {
+            width: 15em;
+            height: auto;
+        }
+
+        &--texte {
+            margin-left: 60px;
+            margin-right: 50px;
+
+            &-texte {
+                margin: 0 40px;
+            }
+
+            &-titre {
+                text-align: center;
+                color: black;
+                font-family: $font-pixel;
+                font-size: 18px;
+            }
+        }
     }
+}
 
-    &--texte {
-      margin-left: 60px;
-      margin-right: 50px;
+.mob__contenu {
 
-      &-texte {
-        margin: 0 40px;
-      }
+    &--bonus,
+    &--malus,
+    &--boss {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-      &-titre {
-        text-align: center;
-        color: black;
-        font-family: $font-pixel;
-        font-size: 12px;
-      }
+        &-image {
+            width: 25em;
+            height: auto;
+            margin-top: 2em;
+        }
+
+        &-texte {
+            margin: 0 40px;
+            margin-top: 1em;
+        }
     }
-  }
 }
 
 .image {
-  &__ctn {
-    overflow: hidden;
-    width: 100%;
-    height: 100px;
-  }
+    &__ctn {
+        overflow: hidden;
+        width: 100%;
+        height: 100px;
+    }
 
-  &__titre {
+    &__background {
+        width: 100%;
+        height: auto;
+        position: relative;
+        z-index: -10000;
+
+        &--img {
+            position: relative;
+            width: 100%;
+            top: 7px
+        }
+    }
+
+    &__titre {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 200%;
+        gap: 2rem;
+        overflow: hidden;
+
+        animation: move 10s linear infinite alternate;
+
+        &--titre {
+            background-image: url(../assets/images/GRIND.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 100px;
+            width: 450px;
+        }
+
+        &--croix {
+            background-image: url(../assets/images/white-cross.svg);
+            width: 80px;
+            height: 80px;
+            color: white;
+            background-repeat: no-repeat;
+            background-position: center center;
+
+            animation: rotate 5s linear infinite;
+        }
+    }
+
+    &__texte {
+        margin: 0 50px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+    }
+}
+
+.personnages__background {
+    position: relative;
+    width: 100%;
+    z-index: -1000;
+
+    &--img {
+        position: relative;
+        width: 100%;
+        top: -12px
+    }
+}
+
+.jeu {
+    background: linear-gradient(#030914 0%, #1b4085 50%, #4879d4 100%);
+
+    &__etoiles {
+        background-image: url(../assets/images/etoile.svg);
+
+        &--titre {
+            font-family: $font-pixel;
+            font-size: 45px;
+            padding-top: 120px;
+            margin-left: 50px;
+            text-transform: uppercase;
+        }
+    }
+
+    &__footer {
+        margin-top: 4rem;
+        overflow: hidden;
+
+        &--titre {
+            margin-left: 50px;
+            font-size: 23px;
+        }
+
+        &--gris {
+            color: #E9EFFA;
+            font-weight: bold;
+            opacity: 0.6;
+            margin-left: 50px;
+        }
+
+        &--credits {
+            margin-left: 50px;
+        }
+
+        &--img {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 200%;
+            height: fit-content;
+            gap: 2rem;
+
+            animation: move 10s linear infinite alternate;
+
+            &--titre {
+                background-image: url(../assets/images/GRIND_vide.svg);
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                height: fit-content;
+                width: 600px;
+                padding-bottom: 60px;
+
+            }
+
+            &--croix {
+                background-image: url(../assets/images/croix_vide.svg);
+                width: 200px;
+                height: 50px;
+                color: white;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: contain;
+                animation: rotate 5s linear infinite;
+            }
+        }
+    }
+}
+
+.jeu__etoiles .hero__cta {
+    margin-left: 50px;
+    width: 4em;
+}
+
+.image__slider {
     position: relative;
     display: flex;
     align-items: center;
     width: 200%;
+    height: fit-content;
     gap: 2rem;
+    margin-bottom: 40px;
+    overflow: hidden;
 
-    animation: move 10s linear infinite;
+    animation: move2 10s linear infinite alternate;
 
-    &--titre {
-      background-image: url(../assets/images/GRIND.svg);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      height: 100px;
-      width: 450px;
+    img {
+        width: 30rem;
     }
-
-    &--croix {
-      background-image: url(../assets/images/white-cross.svg);
-      width: 80px;
-      height: 80px;
-      color: white;
-      background-repeat: no-repeat;
-      background-position: center center;
-
-      animation: rotate 5s linear infinite;
-    }
-  }
 }
 
 @keyframes move {
-  0% {
-    left: 0;
-  }
+    from {
+        transform: translateX(0);
+    }
 
-  100% {
-    left: -90%;
-  }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes move2 {
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
 }
 
 @keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
+    0% {
+        transform: rotate(0deg);
+    }
 
-  100% {
-    transform: rotate(180deg);
-  }
+    100% {
+        transform: rotate(180deg);
+    }
 }
