@@ -12,8 +12,9 @@ $border-color: rgb(24, 40, 70);
 
 // Font Variables
 $font-pixel: 'Minecraft', sans-serif;
-$font-clash: 'Clash display', sans-serif;
-$font-ka: 'karmatic arcade', sans-serif;
+$font-clash: 'Clash Display', sans-serif;
+$font-ka: 'Karmatic Arcade', sans-serif;
 
 // Font Sizes
-$p-desktop: 1.5rem;
+$p-size: clamp(1rem, 0.75rem + 0.8333vw, 1.5rem);
+$h2-size: clamp(2.8125rem, 1.2188rem + 5.3125vw, 6rem);
