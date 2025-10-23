@@ -3,40 +3,28 @@
 @import 'components/buttons';
 
 body {
-    margin: 0;
-    background-color: #030914;
-    color: white;
+  margin: 0;
+  background-color: #030914;
+  color: white;
 }
 
 p {
-    font-family: $font-clash;
-    font-size: clamp(1rem, 0.4693rem + 1.8868vw, 1.375rem);
-    line-height: 140%;
-}
-
-h2 {
-    letter-spacing: 0.20em;
-    font-size: clamp(2rem, 0.5849rem + 5.0314vw, 3rem);
-}
-
-h3 {
-    font-size: clamp(1.4375rem, 0.4646rem + 3.4591vw, 2.125rem);
-}
-
-h4 {
-    font-family: $font-clash;
+  font-family: $font-clash;
+  font-size: $p-size;
 }
 
 //hero
 .hero {
-    &__container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background: $color-background;
-    }
+  position: relative;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: $color-background;
+  }
 
     &__logo {
         @media (max-width: 768px) {
@@ -44,29 +32,188 @@ h4 {
         }
     }
 
-    &__span {
-        font-family: $font-pixel;
-        font-size: $p-desktop;
-        text-transform: uppercase;
-        color: white;
-        margin-top: 2rem;
-        text-align: center;
-    }
+  &__span {
+    font-family: $font-pixel;
+    font-size: $p-size;
+    text-transform: uppercase;
+    color: white;
+    margin-top: 2rem;
+    text-align: center;
+  }
 
-    &__background,
-    &__batiments {
-        width: 100vw;
+  &__background,
+  &__batiments {
+    width: 100vw;
+  }
+
+  &__pixel-transition {
+    position: absolute;
+    bottom: -40%;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/images/pixel-transition.png);
+    background-repeat: repeat-x;
+    background-size: contain;
+    transform: rotate(180deg);
+    z-index: -1;
+
+    @media (max-width: 768px) {
+      bottom: -20%;
     }
+  }
 }
 
 .hero__background,
 .hero__batiments {
-    width: 100vw;
+  width: 100vw;
+}
+
+.intro {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 25%;
+  position: relative;
+
+  @media (max-width: 768px) {
+    margin: 1rem;
+  }
+
+  h2 {
+    margin: 1rem 0;
+    width: 18ch;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  &-titre {
+
+    &__blanc {
+      font-family: $font-pixel;
+      font-size: $h2-size;
+      color: white;
+      text-transform: uppercase;
+    }
+
+    &__transparent {
+      font-family: $font-pixel;
+      font-size: $h2-size;
+      text-transform: uppercase;
+      color: white;
+    }
+  }
+
+  &-text {
+    font-family: $font-clash;
+    font-size: $p-size;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 4rem;
+
+    @media (max-width: 768px) {
+      align-items: center;
+      justify-content: center;
+      margin-right: 0;
+      margin-bottom: 2rem;
+    }
+
+    p {
+      width: 26ch;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+    }
+
+    &__grind {
+      font-family: $font-pixel;
+      text-transform: uppercase;
+      color: $color-buttons;
+    }
+  }
+}
+
+.info {
+  background-color: $main-color;
+  padding: 2rem 15%;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+
+  &__title {
+    font-family: $font-clash;
+    font-size: clamp(2rem, 1.5rem + 1.6667vw, 3rem);
+    margin-bottom: 2rem;
+    margin-top: 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+.accordion {
+
+  &__item {
+    width: 40%;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid black;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  &__header {
+    cursor: pointer;
+    padding: .5rem;
+
+    h3 {
+      font-family: $font-pixel;
+      font-size: $h3-size;
+      text-transform: uppercase;
+      margin: 0;
+      color: #000;
+    }
+
+    span {
+      font-family: $font-clash;
+      font-size: $p-size;
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 .5rem;
+
+    &--active {
+      max-height: 1000px;
+    }
+  }
 }
 
 .cross {
-    width: 15px;
-    height: 15px;
+  width: 15px;
+  height: 15px;
+  transition: transform 0.3s ease;
+
+  &--active {
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+  }
 }
 
 //personnages
