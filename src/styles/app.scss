@@ -4,9 +4,14 @@
 
 body {
   margin: 0;
-  box-sizing: border-box;
+  background-color: #030914;
+  color: white; 
 }
 
+p{
+  font-family: $font-clash;
+}
+//hero
 .hero {
   &__container {
     display: flex;
@@ -37,3 +42,103 @@ body {
     width: 100vw;
   }
 }
+.hero__background, .hero__batiments{
+  width: 100vw;
+}
+.cross{
+  width: 15px;
+  height: 15px;
+}
+//personnages
+.personnages{
+  background-color: #2C4C87;
+  padding-bottom: 4rem;
+
+  &__titre{
+    font-family:$font-pixel;
+    font-size: 24px;
+  } 
+}
+.personnages1, .personnages2, .personnages3, .personnages4{
+    &__contenu{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 4rem;
+
+      &--image{
+      width: 350px;
+      height: auto;
+      }
+
+      &--texte{
+        margin-left: 60px;
+        margin-right: 50px;
+
+        &-texte{
+          margin: 0 40px;
+        }
+
+        &-titre{
+          text-align: center;
+          color: black;
+          font-family:$font-pixel;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .image{
+    &__ctn {
+      overflow: hidden;
+      width: 100%;
+      height: 100px;
+    }
+    &__titre{
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 200%;
+      gap: 2rem;
+
+      animation: move 10s linear infinite;
+
+      &--titre{
+        background-image: url(../assets/images/GRIND.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 100px;
+        width: 450px;
+      }
+    &--croix{
+          background-image: url(../assets/images/white-cross.svg);
+          width: 80px;
+          height: 80px;
+          color: white;
+          background-repeat: no-repeat;
+          background-position: center center;
+
+          animation: rotate 5s linear infinite;
+        }
+    } 
+  }
+
+  @keyframes move {
+    0% {
+      left: 0;
+    }
+
+    100% {
+      left: -90%;
+    }
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(180deg);
+    }
+  }
