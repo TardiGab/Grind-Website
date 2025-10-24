@@ -1,11 +1,22 @@
 @import 'utils/variables';
 @import 'components/type';
+@import 'components/buttons';
 
 body {
   margin: 0;
+  background-color: #030914;
+  color: white;
 }
 
+p {
+  font-family: $font-clash;
+  font-size: $p-size;
+}
+
+//hero
 .hero {
+  position: relative;
+
   &__container {
     // display: flex;
     // flex-direction: column;
@@ -24,6 +35,12 @@ body {
 
     @media (max-width: 768px) {
       width: 90%;
+
+      &__logo {
+        @media (max-width: 768px) {
+          width: 90%;
+        }
+      }
     }
   }
 
@@ -33,7 +50,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: $font-pixel;
-    font-size: $p-desktop;
+    font-size: $p-size;
     text-transform: uppercase;
     color: white;
     margin-top: 2rem;
@@ -41,26 +58,24 @@ body {
     z-index: 999;
   }
 
-  &__cta {
-    font-family: $font-pixel;
-    font-size: $p-desktop;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: black;
-    padding: .5rem 3rem;
-    background-color: #eb8b47;
-    position: relative;
+  &__background,
+  &__batiments {
+    width: 100vw;
+  }
 
-    &::before {
-      content: '';
-      clip-path: polygon(400px 400px, 400px 0px, 75.24px 0px, 75.24px 35.33px, 36.45px 35.33px, 36.45px 66.3px, 0px 66.3px, 0px 332.83px, 36.45px 332.83px, 36.45px 367.82px, 75.24px 367.82px, 75.24px 400px);
-      background-color: #eb8b47;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 10px;
-      height: 10px;
-      transform-origin: center;
+  &__pixel-transition {
+    position: absolute;
+    bottom: -40%;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/images/pixel-transition.png);
+    background-repeat: repeat-x;
+    background-size: contain;
+    transform: rotate(180deg);
+    z-index: -1;
+
+    @media (max-width: 768px) {
+      bottom: -20%;
     }
   }
 
@@ -125,5 +140,425 @@ body {
     background-color: $color-floor;
     box-shadow: 0px 5px 0px 5px $border-color;
     z-index: 4;
+  }
+}
+
+.hero__background,
+.hero__batiments {
+  width: 100vw;
+}
+
+.intro {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 25%;
+  position: relative;
+
+  @media (max-width: 768px) {
+    margin: 1rem;
+  }
+
+  h2 {
+    margin: 1rem 0;
+    width: 18ch;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  &-titre {
+
+    &__blanc {
+      font-family: $font-pixel;
+      font-size: $h2-size;
+      color: white;
+      text-transform: uppercase;
+    }
+
+    &__transparent {
+      font-family: $font-pixel;
+      font-size: $h2-size;
+      text-transform: uppercase;
+      color: white;
+    }
+  }
+
+  &-text {
+    font-family: $font-clash;
+    font-size: $p-size;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 4rem;
+
+    @media (max-width: 768px) {
+      align-items: center;
+      justify-content: center;
+      margin-right: 0;
+      margin-bottom: 2rem;
+    }
+
+    p {
+      width: 26ch;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+    }
+
+    &__grind {
+      font-family: $font-pixel;
+      text-transform: uppercase;
+      color: $color-buttons;
+    }
+  }
+}
+
+.info {
+  background-color: $main-color;
+  padding: 2rem 15%;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+
+  &__title {
+    font-family: $font-clash;
+    font-size: clamp(2rem, 1.5rem + 1.6667vw, 3rem);
+    margin-bottom: 2rem;
+    margin-top: 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+.accordion {
+
+  &__item {
+    width: 40%;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid black;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  &__header {
+    cursor: pointer;
+    padding: .5rem;
+
+    h3 {
+      font-family: $font-pixel;
+      font-size: $h3-size;
+      text-transform: uppercase;
+      margin: 0;
+      color: #000;
+    }
+
+    span {
+      font-family: $font-clash;
+      font-size: $p-size;
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 .5rem;
+
+    &--active {
+      max-height: 1000px;
+    }
+  }
+}
+
+.cross {
+  width: 15px;
+  height: 15px;
+  transition: transform 0.3s ease;
+
+  &--active {
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+  }
+}
+
+//personnages
+.personnages {
+  background-color: #2C4C87;
+  padding-bottom: 2rem;
+
+  &__titre {
+    font-family: $font-pixel;
+    font-size: 24px;
+    margin: 0 50px;
+    padding-top: 8px;
+  }
+
+  &__texte {
+    &-presentation {
+      margin: 16px 50px;
+    }
+  }
+}
+
+.personnages1,
+.personnages2,
+.personnages3,
+.personnages4 {
+  &__contenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+
+    &--image {
+      width: 15em;
+      height: auto;
+    }
+
+    &--texte {
+      margin-left: 60px;
+      margin-right: 50px;
+
+      &-texte {
+        margin: 0 40px;
+      }
+
+      &-titre {
+        text-align: center;
+        color: black;
+        font-family: $font-pixel;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.mob__contenu {
+
+  &--bonus,
+  &--malus,
+  &--boss {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-image {
+      width: 25em;
+      height: auto;
+      margin-top: 2em;
+    }
+
+    &-texte {
+      margin: 0 40px;
+      margin-top: 1em;
+    }
+  }
+}
+
+.image {
+  &__ctn {
+    overflow: hidden;
+    width: 100%;
+    height: 100px;
+  }
+
+  &__background {
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: -10000;
+
+    &--img {
+      position: relative;
+      width: 100%;
+      top: 7px
+    }
+  }
+
+  &__titre {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 200%;
+    gap: 2rem;
+    overflow: hidden;
+
+    animation: move 10s linear infinite alternate;
+
+    &--titre {
+      background-image: url(../assets/images/GRIND.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 100px;
+      width: 450px;
+    }
+
+    &--croix {
+      background-image: url(../assets/images/white-cross.svg);
+      width: 80px;
+      height: 80px;
+      color: white;
+      background-repeat: no-repeat;
+      background-position: center center;
+
+      animation: rotate 5s linear infinite;
+    }
+  }
+
+  &__texte {
+    margin: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+  }
+}
+
+.personnages__background {
+  position: relative;
+  width: 100%;
+  z-index: -1000;
+
+  &--img {
+    position: relative;
+    width: 100%;
+    top: -12px
+  }
+}
+
+.jeu {
+  background: linear-gradient(#030914 0%, #1b4085 50%, #4879d4 100%);
+
+  &__etoiles {
+    background-image: url(../assets/images/etoile.svg);
+
+    &--titre {
+      font-family: $font-pixel;
+      font-size: 45px;
+      padding-top: 120px;
+      margin-left: 50px;
+      text-transform: uppercase;
+    }
+  }
+
+  &__footer {
+    margin-top: 4rem;
+    overflow: hidden;
+
+    &--titre {
+      margin-left: 50px;
+      font-size: 23px;
+    }
+
+    &--gris {
+      color: #E9EFFA;
+      font-weight: bold;
+      opacity: 0.6;
+      margin-left: 50px;
+    }
+
+    &--credits {
+      margin-left: 50px;
+    }
+
+    &--img {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 200%;
+      height: fit-content;
+      gap: 2rem;
+
+      animation: move 10s linear infinite alternate;
+
+      &--titre {
+        background-image: url(../assets/images/GRIND_vide.svg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: fit-content;
+        width: 600px;
+        padding-bottom: 60px;
+
+      }
+
+      &--croix {
+        background-image: url(../assets/images/croix_vide.svg);
+        width: 200px;
+        height: 50px;
+        color: white;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        animation: rotate 5s linear infinite;
+      }
+    }
+  }
+}
+
+.jeu__etoiles .hero__cta {
+  margin-left: 50px;
+  width: 4em;
+}
+
+.image__slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 200%;
+  height: fit-content;
+  gap: 2rem;
+  margin-bottom: 40px;
+  overflow: hidden;
+
+  animation: move2 10s linear infinite alternate;
+
+  img {
+    width: 30rem;
+  }
+}
+
+@keyframes move {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes move2 {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(180deg);
   }
 }

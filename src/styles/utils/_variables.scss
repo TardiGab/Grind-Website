@@ -1,10 +1,23 @@
+// Values Variables
+$outline-width: 6px;
+$shadow-width: 4px;
+
 // Color Variables
-$color-background: linear-gradient(180deg, #030914 -22.26%, #1B4085 39.45%, #4879D4 98.23%);
 $color-floor: #93aee1;
+$color-background: linear-gradient(180deg, #030914 -22.26%, #1B4085 39.45%, rgb(72, 121, 212) 98.23%);
+$main-color: rgb(72, 121, 212);
+$color-buttons: rgb(49, 83, 144);
+$color-hover: rgb(27, 69, 146);
+$color-shadow-hover: rgb(16, 43, 92);
+$color-shadow: rgb(27, 47, 83);
 $border-color: rgb(24, 40, 70);
 
 // Font Variables
 $font-pixel: 'Minecraft', sans-serif;
+$font-clash: 'Clash Display', sans-serif;
+$font-ka: 'Karmatic Arcade', sans-serif;
 
 // Font Sizes
-$p-desktop: 1.5rem;
+$p-size: clamp(1rem, 0.75rem + 0.8333vw, 1.5rem);
+$h2-size: clamp(2.8125rem, 1.2188rem + 5.3125vw, 6rem);
+$h3-size: clamp(1.4375rem, 1.0938rem + 1.1458vw, 2.125rem);
