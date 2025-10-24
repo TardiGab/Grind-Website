@@ -122,24 +122,24 @@ p {
 
   &__front-buildings {
     position: absolute;
-    bottom: 20%;
+    bottom: 184px;
     left: 0;
     background-image: url(../assets/images/front-buildings.png);
-    background-repeat: no-repeat;
+    background-repeat: repeat-x;
     background-size: cover;
-    height: 20%;
+    height: 30%;
     width: 100%;
-    z-index: 3;
+    z-index: 6;
   }
 
   &__floor {
     height: 15%;
     width: 100%;
     position: absolute;
-    bottom: 5%;
+    bottom: 50px;
     background-color: $color-floor;
     box-shadow: 0px 5px 0px 5px $border-color;
-    z-index: 4;
+    z-index: 5;
   }
 }
 

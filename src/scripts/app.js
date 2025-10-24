@@ -12,10 +12,10 @@ window.addEventListener('scroll', () => {
   bgBuildingsFront.style.transform = `translateY(${scrollY * 0.3}px)`;
   frontBuildings.style.transform = `translateY(${scrollY * 0.2}px)`;
   floor.style.transform = `translateY(${scrollY * 0.2}px)`;
-  const accordions = document.querySelectorAll('.accordion__header');
-  const contents = document.querySelectorAll('.accordion__content');
 });
 
+const accordions = document.querySelectorAll('.accordion__header');
+const contents = document.querySelectorAll('.accordion__content');
 accordions.forEach((accordion, index) => {
   accordion.addEventListener('click', () => {
     contents[index].classList.toggle('accordion__content--active');
