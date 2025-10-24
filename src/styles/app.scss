@@ -520,13 +520,13 @@ p {
   position: relative;
   display: flex;
   align-items: center;
-  width: 200%;
+  justify-content: center;
+  width: 100%;
   height: fit-content;
   gap: 2rem;
   margin-bottom: 40px;
   overflow: hidden;
-
-  animation: move2 10s linear infinite alternate;
+  flex-wrap: wrap;
 
   img {
     width: 30rem;
@@ -540,16 +540,6 @@ p {
 
   to {
     transform: translateX(-50%);
-  }
-}
-
-@keyframes move2 {
-  from {
-    transform: translateX(-50%);
-  }
-
-  to {
-    transform: translateX(0);
   }
 }
 
