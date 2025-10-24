@@ -8,8 +8,8 @@ const floor = document.querySelector('.hero__floor');
 
 window.addEventListener('scroll', () => {
   const scrollY = window.scrollY;
-  bgBuildingsBack.style.transform = `translateY(${scrollY * 0.1}px)`;
-  bgBuildingsFront.style.transform = `translateY(${scrollY * 0.2}px)`;
-  frontBuildings.style.transform = `translateY(${scrollY * 0.3}px)`;
-  floor.style.transform = `translateY(${scrollY * 0.4}px)`;
+  bgBuildingsBack.style.transform = `translateY(${scrollY * 0.4}px)`;
+  bgBuildingsFront.style.transform = `translateY(${scrollY * 0.3}px)`;
+  frontBuildings.style.transform = `translateY(${scrollY * 0.2}px)`;
+  floor.style.transform = `translateY(${scrollY * 0.2}px)`;
 });

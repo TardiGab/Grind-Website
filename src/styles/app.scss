@@ -124,5 +124,6 @@ body {
     bottom: 5%;
     background-color: $color-floor;
     box-shadow: 0px 5px 0px 5px $border-color;
+    z-index: 4;
   }
 }
