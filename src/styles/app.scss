@@ -422,7 +422,6 @@ p {
       color: white;
       background-repeat: no-repeat;
       background-position: center center;
-
       animation: rotate 5s linear infinite;
     }
   }
@@ -505,7 +504,7 @@ p {
       height: fit-content;
       gap: 2rem;
 
-      animation: move 10s linear infinite alternate;
+      animation: move 10s linear infinite;
 
       &--titre {
         background-image: url(../assets/images/GRIND_vide.svg);
@@ -526,7 +525,7 @@ p {
         background-repeat: no-repeat;
         background-position: center center;
         background-size: contain;
-        animation: rotate 5s linear infinite;
+        animation: rotate 10s linear infinite;
       }
     }
   }
@@ -547,12 +546,12 @@ p {
   }
 }
 
-// @keyframes rotate {
-//   0% {
-//     transform: rotate(0deg);
-//   }
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
 
-//   100% {
-//     transform: rotate(-180deg);
-//   }
-// }
+  100% {
+    transform: rotate(-180deg);
+  }
+}

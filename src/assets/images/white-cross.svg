@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 354.33 354.33">
+<svg id="Calque_2" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 354.3 354.3">
+  <!-- Generator: Adobe Illustrator 29.8.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 2)  -->
   <defs>
     <style>
-      .cls-1 {
+      .st0 {
         fill: #fff;
+      }
+
+      .st1 {
+        display: none;
       }
     </style>
   </defs>
-  <g id="Calque_1-2" data-name="Calque 1">
-    <g>
-      <rect class="cls-1" x="127.56" width="99.21" height="354.33" transform="translate(354.33 354.33) rotate(180)"/>
-      <rect class="cls-1" x="127.56" y="8.32" width="99.21" height="354.33" transform="translate(-8.32 362.65) rotate(-90)"/>
-    </g>
+  <g id="Calque_1-2">
+    <rect class="st1" x="-.4" y="-.4" width="355.2" height="355.2"/>
   </g>
+  <rect class="st0" x="-2.2" y="127.2" width="354.7" height="100" transform="translate(-2 352.4) rotate(-90)"/>
+  <rect class="st0" x="-.2" y="127.2" width="354.7" height="100"/>
 </svg>
