@@ -2,6 +2,11 @@
 
 import Swiper from "swiper/bundle";
 import "swiper/css";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import TextPlugin from "gsap/TextPlugin";
+import ScrambleTextPlugin from "gsap/ScrambleTextPlugin";
+gsap.registerPlugin(ScrollTrigger, TextPlugin, ScrambleTextPlugin);
 
 const parallax = document.querySelector('.hero__parallax');
 const bgBuildingsBack = document.querySelector('.hero__bg-buildings-back');
@@ -38,3 +43,16 @@ const swiper = new Swiper('.swiper', {
     disableOnInteraction: false,
   },
 });
+
+gsap.from(".leveling__title", {
+  duration: 2,
+  delay: 0.5,
+  scrollTrigger: {
+    trigger: ".leveling__title",
+    start: "top 80%",
+  },
+  scrambleText: {
+    text: "Leveling Made Easy",
+    chars: "upperCase lowerCase numbers",
+  }
+})
