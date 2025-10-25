@@ -96,25 +96,24 @@ p {
 
     &-back {
       position: absolute;
-      bottom: 20%;
+      bottom: 190px;
       opacity: 0.5;
+      left: 20%;
       background-image: url(../assets/images/background-buildings.png);
-      background-repeat: no-repeat;
-      background-size: cover;
-      height: 25%;
+      background-repeat: repeat-x;
+      // background-size: cover;
+      height: 50%;
       width: 100%;
-      transform: scale(-1, 1);
       z-index: 1;
     }
 
     &-front {
       position: absolute;
-      bottom: 20%;
-      left: 15%;
+      bottom: 200px;
       background-image: url(../assets/images/background-buildings.png);
-      background-repeat: no-repeat;
-      background-size: cover;
-      height: 30%;
+      background-repeat: repeat-x;
+      // background-size: cover;
+      height: 45%;
       width: 100%;
       z-index: 2;
     }
@@ -122,7 +121,7 @@ p {
 
   &__front-buildings {
     position: absolute;
-    bottom: 184px;
+    bottom: 202px;
     left: 0;
     background-image: url(../assets/images/front-buildings.png);
     background-repeat: repeat-x;
