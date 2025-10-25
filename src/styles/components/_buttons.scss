@@ -2,6 +2,7 @@
   &__cta {
     background: $color-buttons;
     font-family: $font-pixel;
+    text-transform: uppercase;
     display: inline-block;
     position: relative;
     text-align: center;
@@ -33,15 +34,15 @@
     &:before {
       top: -$outline-width;
       left: 0;
-      border-top: $outline-width black solid;
-      border-bottom: $outline-width black solid;
+      border-top: $outline-width #182846 solid;
+      border-bottom: $outline-width #182846 solid;
     }
 
     &:after {
       left: -$outline-width;
       top: 0;
-      border-left: $outline-width black solid;
-      border-right: $outline-width black solid;
+      border-left: $outline-width #182846 solid;
+      border-right: $outline-width #182846 solid;
     }
   }
 }
