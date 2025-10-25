@@ -1,6 +1,7 @@
 @import 'utils/variables';
 @import 'components/type';
 @import 'components/buttons';
+@import 'components/swiper';
 
 body {
   margin: 0;
@@ -532,9 +533,9 @@ p {
 
 .image__slider {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
   width: 100%;
   height: fit-content;
   gap: 2rem;
@@ -542,9 +543,9 @@ p {
   overflow: hidden;
   flex-wrap: wrap;
 
-  img {
-    width: 30rem;
-  }
+  // img {
+  //   width: 30rem;
+  // }
 }
 
 @keyframes move {

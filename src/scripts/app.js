@@ -1,5 +1,8 @@
 "use strict";
 
+import Swiper from "swiper/bundle";
+import "swiper/css";
+
 const parallax = document.querySelector('.hero__parallax');
 const bgBuildingsBack = document.querySelector('.hero__bg-buildings-back');
 const bgBuildingsFront = document.querySelector('.hero__bg-buildings-front');
@@ -21,4 +24,16 @@ accordions.forEach((accordion, index) => {
     contents[index].classList.toggle('accordion__content--active');
     accordion.querySelector('.cross').classList.toggle('cross--active');
   });
+});
+
+const swiper = new Swiper('.swiper', {
+  loop: true,
+  centeredSlides: true,
+  slidesPerView: 'auto',
+  spaceBetween: 30,
+  grabCursor: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
 });
