@@ -30,8 +30,8 @@ const swiper = new Swiper('.swiper', {
   loop: true,
   centeredSlides: true,
   slidesPerView: 'auto',
-  spaceBetween: 30,
   grabCursor: true,
+  spaceBetween: 0,
   speed: 800,
   autoplay: {
     delay: 3000,
