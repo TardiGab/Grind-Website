@@ -538,11 +538,11 @@ p {
       }
     }
   }
-}
 
-.jeu__etoiles .hero__cta {
-  margin-left: 50px;
-  width: 4em;
+  &__cta {
+    margin-left: 50px;
+    width: 6em;
+  }
 }
 
 @keyframes move {
@@ -551,7 +551,6 @@ p {
   }
 
   to {
-    // transform: translateX(-595px);
     transform: translateX(-43.5%);
   }
 }
