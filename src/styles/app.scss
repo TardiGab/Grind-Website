@@ -533,19 +533,12 @@ p {
 
 .image__slider {
   position: relative;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
   width: 100%;
   height: fit-content;
   gap: 2rem;
   margin-bottom: 40px;
   overflow: hidden;
   flex-wrap: wrap;
-
-  // img {
-  //   width: 30rem;
-  // }
 }
 
 @keyframes move {
