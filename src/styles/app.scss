@@ -425,6 +425,21 @@ p {
     display: flex;
     justify-content: space-between;
     font-size: 16px;
+    font-family: $font-clash;
+
+    &--gauche {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    &--droite {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.5rem;
+    }
   }
 }
 
