@@ -102,7 +102,7 @@ p {
 
     &-back {
       position: absolute;
-      bottom: 190px;
+      bottom: 19%;
       opacity: 0.5;
       left: 20%;
       background-image: url(../assets/images/background-buildings.png);
@@ -115,7 +115,7 @@ p {
 
     &-front {
       position: absolute;
-      bottom: 200px;
+      bottom: 19%;
       background-image: url(../assets/images/background-buildings.png);
       background-repeat: repeat-x;
       // background-size: cover;
@@ -127,14 +127,14 @@ p {
 
   &__front-buildings {
     position: absolute;
-    bottom: 202px;
+    bottom: 20%;
     left: 0;
     background-image: url(../assets/images/front-buildings.png);
     background-repeat: repeat-x;
     background-size: cover;
     height: 30%;
     width: 100%;
-    z-index: 6;
+    z-index: 5;
   }
 
   &__floor {
