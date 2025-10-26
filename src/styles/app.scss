@@ -319,6 +319,7 @@ p {
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+    margin-top: 2rem;
   }
 
   &__content {
@@ -328,7 +329,6 @@ p {
     width: 60%;
 
     @media (max-width: 1400px) {
-      // width: 100%;
       flex-direction: column;
       align-items: center;
       gap: 1rem;
@@ -360,8 +360,12 @@ p {
     margin: 0;
     margin-bottom: 1rem;
     display: block;
+    max-width: 15ch;
     min-height: 2em;
-    max-width: 80%;
+
+    @media (max-width: 1440px) {
+      max-width: 100%;
+    }
 
     @media (max-width: 768px) {
       max-width: 100%;
@@ -369,15 +373,8 @@ p {
   }
 
   &__desc {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     font-family: $font-clash;
     font-size: $p-size;
-
-    @media (max-width: 768px) {
-      align-items: center;
-    }
   }
 
   &__h3 {
