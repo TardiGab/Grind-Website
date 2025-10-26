@@ -3,6 +3,10 @@
 @import 'components/buttons';
 @import 'components/swiper';
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   background-color: #030914;
@@ -304,6 +308,7 @@ p {
 
   @media (max-width: 768px) {
     padding: 1rem;
+    padding-top: 4rem;
   }
 
   &__container {
@@ -318,16 +323,28 @@ p {
     align-items: flex-start;
     gap: 2rem;
     width: 50%;
-    margin-top: 2rem;
 
     @media (max-width: 1024px) {
       width: 100%;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
     }
   }
 
   &__img {
     max-width: 400px;
     height: auto;
+
+    @media (max-width: 768px) {
+      max-width: 70%;
+    }
+  }
+
+  &__text {
+    @media (max-width: 1024px) {
+      width: 40ch;
+    }
   }
 
   &__title {
@@ -336,6 +353,9 @@ p {
     text-transform: uppercase;
     margin: 0;
     margin-bottom: 1rem;
+    max-height: 2em;
+    max-width: 80%;
+    overflow: hidden;
   }
 
   &__desc {
@@ -350,10 +370,6 @@ p {
     }
   }
 
-  &__text {
-    margin-top: 2rem;
-  }
-
   &__h3 {
     font-family: $font-pixel;
     font-size: $h3-size;
@@ -366,6 +382,10 @@ p {
     font-family: $font-clash;
     font-size: $p-size;
     margin: 0;
+
+    @media (max-width: 768px) {
+      max-width: 25ch;
+    }
   }
 
   &__background {
@@ -433,10 +453,10 @@ p {
   justify-content: center;
   gap: 2rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    padding: 1rem;
   }
 
   &--bonus,
@@ -452,7 +472,7 @@ p {
       height: auto;
 
       @media (max-width: 768px) {
-        width: 15em;
+        width: 80%;
       }
     }
 
@@ -460,6 +480,11 @@ p {
       max-width: 23ch;
       padding: 0 2rem;
       margin: 0;
+
+      @media (max-width: 1024px) {
+        max-width: 25ch;
+        padding: 0;
+      }
     }
   }
 }
