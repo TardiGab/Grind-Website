@@ -548,6 +548,10 @@ p {
       padding-top: 120px;
       margin-left: 50px;
       text-transform: uppercase;
+
+      @media (max-width: 768px) {
+        margin: 1rem;
+      }
     }
   }
 
@@ -558,6 +562,11 @@ p {
     &--titre {
       margin-left: 50px;
       font-size: 23px;
+      font-family: $font-clash;
+
+      @media (max-width: 768px) {
+        margin: 1rem;
+      }
     }
 
     &--gris {
@@ -565,10 +574,18 @@ p {
       font-weight: bold;
       opacity: 0.6;
       margin-left: 50px;
+
+      @media (max-width: 768px) {
+        margin: 1rem;
+      }
     }
 
     &--credits {
       margin-left: 50px;
+
+      @media (max-width: 768px) {
+        margin: 1rem;
+      }
     }
 
     &--img {
@@ -607,6 +624,11 @@ p {
 
   &__cta {
     margin-left: 50px;
+
+    @media (max-width: 768px) {
+      margin: 1rem;
+      width: calc(100% - 2rem);
+    }
   }
 }
 
