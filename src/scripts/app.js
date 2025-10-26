@@ -6,6 +6,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import TextPlugin from "gsap/TextPlugin";
 import ScrambleTextPlugin from "gsap/ScrambleTextPlugin";
+import { Canvas } from './components/Canvas.js';
 gsap.registerPlugin(ScrollTrigger, TextPlugin, ScrambleTextPlugin);
 
 const parallax = document.querySelector('.hero__parallax');
@@ -63,3 +64,35 @@ gsap.from(".intro-titre__blanc span", {
     start: "top 80%",
   },
 })
+
+// --- TOOLS --- 
+const rand = (max = 1, min = 0, { round = false } = {}) => {
+  let n = Math.random() * (max - min) + min;
+  if (round) {
+    return Math.round(n);
+  }
+  return n;
+};
+
+const heroStars = document.querySelector('.hero__stars');
+const canvas = document.createElement('canvas');
+const ctx = canvas.getContext('2d');
+heroStars.appendChild(canvas);
+
+function stars(x, y, z) {
+  this.x = x;
+  this.y = y;
+  this.z = z;
+
+}
+
+function animate() {
+  requestAnimationFrame(animate);
+  const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+  gradient.addColorStop(0, '#0b1c3dff');
+  gradient.addColorStop(1, '#4879d4');
+  ctx.fillStyle = gradient;
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+}
+
+animate();
