@@ -159,6 +159,18 @@ p {
     box-shadow: 0px 5px 0px 5px $border-color;
     z-index: 5;
   }
+
+  &__trees {
+    position: absolute;
+    bottom: 15%;
+    left: 0;
+    background-image: url(../assets/images/trees.png);
+    background-repeat: repeat-x;
+    background-size: contain;
+    height: 25%;
+    width: 100%;
+    z-index: 6;
+  }
 }
 
 .intro {

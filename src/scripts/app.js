@@ -14,6 +14,7 @@ const bgBuildingsFront = document.querySelector('.hero__bg-buildings-front');
 const frontBuildings = document.querySelector('.hero__front-buildings');
 const floor = document.querySelector('.hero__floor');
 const stars = document.querySelector('.hero__stars');
+const trees = document.querySelector('.hero__trees');
 
 window.addEventListener('scroll', () => {
   const scrollY = window.scrollY;
@@ -22,6 +23,7 @@ window.addEventListener('scroll', () => {
   frontBuildings.style.transform = `translateY(${scrollY * 0.2}px)`;
   floor.style.transform = `translateY(${scrollY * 0.2}px)`;
   stars.style.transform = `translateY(${scrollY * 0.6}px)`;
+  trees.style.transform = `translateY(${scrollY * 0.2}px)`;
 });
 
 const accordions = document.querySelectorAll('.accordion__header');
