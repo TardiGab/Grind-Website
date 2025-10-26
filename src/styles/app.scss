@@ -53,13 +53,8 @@ p {
     z-index: 999;
 
     @media (max-width: 768px) {
+      top: 5rem;
       width: 90%;
-
-      &__logo {
-        @media (max-width: 768px) {
-          width: 90%;
-        }
-      }
     }
   }
 
@@ -75,6 +70,10 @@ p {
     margin-top: 2rem;
     text-align: center;
     z-index: 999;
+
+    @media (max-width: 768px) {
+      top: 12rem;
+    }
   }
 
   &__background,
@@ -170,6 +169,12 @@ p {
     height: 25%;
     width: 100%;
     z-index: 6;
+
+    @media (max-width: 768px) {
+      bottom: 17%;
+      height: 20%;
+      background-size: cover;
+    }
   }
 }
 
