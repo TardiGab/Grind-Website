@@ -12,6 +12,7 @@ body {
 p {
   font-family: $font-clash;
   font-size: $p-size;
+  line-height: 1.4;
 }
 
 //hero
@@ -367,6 +368,16 @@ p {
     margin: 0;
   }
 
+  &__background {
+    position: relative;
+    width: 100%;
+    z-index: -1000;
+    background-image: url(../assets/images/pixel_fond.svg);
+    background-repeat: repeat-x;
+    top: -150px;
+    height: 400px;
+  }
+
 }
 
 // .personnages1,
@@ -418,6 +429,15 @@ p {
 // }
 
 .mob__contenu {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
 
   &--bonus,
   &--malus,
@@ -425,16 +445,21 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
 
     &-image {
       width: 25em;
       height: auto;
-      margin-top: 2em;
+
+      @media (max-width: 768px) {
+        width: 15em;
+      }
     }
 
     &-texte {
-      margin: 0 40px;
-      margin-top: 1em;
+      max-width: 23ch;
+      padding: 0 2rem;
+      margin: 0;
     }
   }
 }
@@ -524,18 +549,6 @@ p {
       align-items: flex-end;
       gap: 0.5rem;
     }
-  }
-}
-
-.personnages__background {
-  position: relative;
-  width: 100%;
-  z-index: -1000;
-
-  &--img {
-    position: relative;
-    width: 100%;
-    top: -12px
   }
 }
 
