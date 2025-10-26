@@ -322,10 +322,10 @@ p {
     display: flex;
     align-items: flex-start;
     gap: 2rem;
-    width: 50%;
+    width: 60%;
 
-    @media (max-width: 1024px) {
-      width: 100%;
+    @media (max-width: 1400px) {
+      // width: 100%;
       flex-direction: column;
       align-items: center;
       gap: 1rem;
@@ -342,7 +342,10 @@ p {
   }
 
   &__text {
+    margin-top: 2rem;
+
     @media (max-width: 1024px) {
+      margin: 0;
       width: 40ch;
     }
   }
@@ -451,9 +454,10 @@ p {
 .mob__contenu {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 2rem;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1400px) {
     flex-direction: column;
     align-items: center;
     padding: 1rem;
@@ -477,13 +481,16 @@ p {
     }
 
     &-texte {
-      max-width: 23ch;
-      padding: 0 2rem;
+      max-width: 20ch;
       margin: 0;
 
       @media (max-width: 1024px) {
         max-width: 25ch;
         padding: 0;
+      }
+
+      @media (max-width: 1400px) {
+        max-width: 40ch;
       }
     }
   }
