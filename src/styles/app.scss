@@ -102,20 +102,20 @@ p {
 
     &-back {
       position: absolute;
-      bottom: 19%;
+      bottom: 19.5%;
       opacity: 0.5;
       left: 20%;
       background-image: url(../assets/images/background-buildings.png);
       background-repeat: repeat-x;
       // background-size: cover;
-      height: 50%;
+      height: 55%;
       width: 100%;
       z-index: 1;
     }
 
     &-front {
       position: absolute;
-      bottom: 19%;
+      bottom: 18.5%;
       background-image: url(../assets/images/background-buildings.png);
       background-repeat: repeat-x;
       // background-size: cover;
@@ -127,7 +127,7 @@ p {
 
   &__front-buildings {
     position: absolute;
-    bottom: 20%;
+    bottom: 19.5%;
     left: 0;
     background-image: url(../assets/images/front-buildings.png);
     background-repeat: repeat-x;
