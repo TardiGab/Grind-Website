@@ -353,7 +353,7 @@ p {
     margin: 0;
     margin-bottom: 1rem;
     display: block;
-    height: 2em;
+    min-height: 2em;
     max-width: 80%;
 
     @media (max-width: 768px) {
