@@ -1,0 +1,53 @@
+.credits{
+    background: linear-gradient(#030914, #1B4085, #4879D4) ;
+    min-height: 100vh;
+    margin: 0 50px;
+
+    @media (min-width: 768px) { 
+            margin:  0 100px;
+        }
+    
+    &__titre {
+        font-family: $font-clash;
+        font-size: $h1-size;
+
+         @media (min-width: 768px) { 
+            text-align: center;
+        }
+    }
+    &__etoiles{
+        background-image: url(../../assets/images/etoile.svg);
+        padding: 50px 0;
+        width: 100%;
+        overflow: hidden;
+
+        &--logo{
+        width: 120px;
+        margin-top: 20px;
+
+        @media (min-width: 768px) { 
+            width: 120px;
+        }
+        }
+
+        
+    }
+    &__sous-titre{
+        font-family: $font-clash;
+        font-size: $h3-size;
+    }
+    &__line{
+        display: block;
+        width: 90vw;
+        border: 1px solid black;
+    }
+    &__liste{
+        font-size: $p-size;
+        font-family: $font-clash;
+
+        &--lien{
+            color: white;
+            font-size: 16px;
+        }
+    }
+}
