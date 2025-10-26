@@ -47,12 +47,19 @@ const swiper = new Swiper('.swiper', {
 gsap.from(".leveling__title", {
   duration: 2,
   delay: 0.5,
+  text: "Leveling Made Easy",
   scrollTrigger: {
     trigger: ".leveling__title",
     start: "top 80%",
   },
-  scrambleText: {
-    text: "Leveling Made Easy",
-    chars: "upperCase lowerCase numbers",
-  }
+})
+
+gsap.from(".intro-titre__blanc span", {
+  text: "",
+  duration: 2,
+  delay: 0.5,
+  scrollTrigger: {
+    trigger: ".intro-titre__blanc",
+    start: "top 80%",
+  },
 })

@@ -161,6 +161,7 @@ p {
 
   @media (max-width: 768px) {
     margin: 1rem;
+    margin-top: 40%;
   }
 
   h2 {
@@ -179,13 +180,8 @@ p {
       font-size: $h2-size;
       color: white;
       text-transform: uppercase;
-    }
-
-    &__transparent {
-      font-family: $font-pixel;
-      font-size: $h2-size;
-      text-transform: uppercase;
-      color: white;
+      display: block;
+      height: 2em;
     }
   }
 
