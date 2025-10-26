@@ -47,7 +47,7 @@ const swiper = new Swiper('.swiper', {
 gsap.from(".leveling__title", {
   duration: 2,
   delay: 0.5,
-  text: "Leveling Made Easy",
+  text: "",
   scrollTrigger: {
     trigger: ".leveling__title",
     start: "top 80%",
