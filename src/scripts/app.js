@@ -13,6 +13,7 @@ const bgBuildingsBack = document.querySelector('.hero__bg-buildings-back');
 const bgBuildingsFront = document.querySelector('.hero__bg-buildings-front');
 const frontBuildings = document.querySelector('.hero__front-buildings');
 const floor = document.querySelector('.hero__floor');
+const stars = document.querySelector('.hero__stars');
 
 window.addEventListener('scroll', () => {
   const scrollY = window.scrollY;
@@ -20,6 +21,7 @@ window.addEventListener('scroll', () => {
   bgBuildingsFront.style.transform = `translateY(${scrollY * 0.3}px)`;
   frontBuildings.style.transform = `translateY(${scrollY * 0.2}px)`;
   floor.style.transform = `translateY(${scrollY * 0.2}px)`;
+  stars.style.transform = `translateY(${scrollY * 0.6}px)`;
 });
 
 const accordions = document.querySelectorAll('.accordion__header');
